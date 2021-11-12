@@ -1,0 +1,241 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 20px;
+}
+
+body{
+  text-align: center;
+  overflow: hidden;
+}
+
+/* container */
+
+.container{
+  background: #FBFBFB;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.6fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  grid-template-areas:
+  "nav nav nav nav"
+  "aside main main main"
+  "aside main main main"
+  "aside content1 content2 content3";
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+
+  width: 100%;
+  margin: 0 1rem 0 0.5rem;
+}
+
+
+
+/* nav */
+
+nav{
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.worldCardsLogo{
+  font-size: 1.7rem;
+  margin-left: 1rem;
+}
+
+.ul-nav{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  width: 70%;
+}
+
+/* aside */
+
+aside{
+
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('img/worldCupTrophy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-position:
+}
+
+
+
+.ownHistory{
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 50%);
+  padding: 0.5rem 1.3rem;
+  border-radius: 1.5rem;
+}
+
+.ownHistory:hover{
+    background-color: rgba(0, 0, 0, 100%);
+    cursor: pointer;
+}
+
+/* main */
+
+#main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-area: main;
+}
+
+.worldCards{
+  margin-top: 1rem;
+}
+
+.connectToWalletBtn{
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  margin: 1rem auto 0 auto;
+}
+
+.connectToWalletBtn:hover{
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  margin: 1rem auto 0 auto;
+  background-color: black;
+  color: white;
+}
+
+/* content 1 */
+
+.content1{
+  background: url('img/filterByPlayerOrTournament.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: content1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1.5rem;
+
+}
+
+.filterByPlayer{
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 50%);
+  padding: 0.2rem 0.6rem;
+  color: white;
+}
+
+.filterByPlayer:hover{
+    background-color: rgba(0, 0, 0, 100%);
+    cursor: pointer;
+}
+
+/* content 2 */
+
+.content2{
+  background: url('img/earnRewards.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: content2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1.5rem;
+}
+
+.earnRewards{
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 50%);
+  padding: 0.2rem 0.6rem;
+  color: white;
+}
+
+.earnRewards:hover{
+    background-color: rgba(0, 0, 0, 100%);
+    cursor: pointer;
+}
+
+/* content 3 */
+
+.content3{
+  background: url('img/displayYourCollection.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: content3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1.5rem;
+}
+
+.displayYourCollection{
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 50%);
+  padding: 0.2rem 0.6rem;
+  color: white;
+}
+
+.displayYourCollection:hover{
+    background-color: rgba(0, 0, 0, 100%);
+    cursor: pointer;
+}
+
+/* footer */
+
+footer{
+
+  grid-area: footer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1000px){
+  .container{
+    text-align: center;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.7fr 0.7fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "nav"
+  "main"
+  "main"
+  "content1"
+  "content2"
+  "content3";
+  }
+  aside{
+    display: none;
+    visibility: none;
+  }
+
+}
