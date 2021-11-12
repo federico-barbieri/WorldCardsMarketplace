@@ -261,6 +261,7 @@ footer{
   }
   .ul-nav{
     font-size: 1.5rem;
+    margin: 1rem auto;
   }
   aside{
     display: none;
