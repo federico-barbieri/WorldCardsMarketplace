@@ -9,18 +9,20 @@ html{
 }
 
 body{
-  text-align: center;
+
   overflow: hidden;
 }
 
 /* container */
 
 .container{
+  margin: 0.5rem auto 1rem auto;
+  max-width: 95%;
   background: #FBFBFB;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr 0.8fr;
   grid-template-rows: 0.6fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 1rem;
   grid-template-areas:
   "nav nav nav nav"
   "aside main main main"
@@ -29,8 +31,6 @@ body{
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
 
-  width: 100%;
-  margin: 0 1rem 0 0.5rem;
 }
 
 
@@ -38,6 +38,7 @@ body{
 /* nav */
 
 nav{
+  background: #EEEEEE;
   grid-area: nav;
   display: flex;
   align-items: center;
@@ -75,7 +76,11 @@ aside{
   color: white;
   font-weight: bold;
   text-align: center;
-  background-position:
+  filter: drop-shadow(2px 2px 5px black);
+}
+
+aside:hover{
+    filter: drop-shadow(4px 4px 5px black);
 }
 
 
@@ -103,13 +108,18 @@ aside{
 }
 
 .worldCards{
-  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+.theMarketplace{
+  margin-bottom: 1rem;
 }
 
 .connectToWalletBtn{
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 1.5rem;
   margin: 1rem auto 0 auto;
+  font-size: 1rem;
 }
 
 .connectToWalletBtn:hover{
@@ -128,14 +138,17 @@ aside{
   background-position: center;
   background-size: cover;
   grid-area: content1;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   border-radius: 1.5rem;
+  filter: drop-shadow(2px 7px 5px black);
+}
 
+.content1:hover{
+  filter: drop-shadow(4px 10px 5px black);
 }
 
 .filterByPlayer{
@@ -165,6 +178,11 @@ aside{
   justify-content: center;
   text-align: center;
   border-radius: 1.5rem;
+  filter: drop-shadow(2px 7px 5px black);
+}
+
+.content2:hover{
+  filter: drop-shadow(4px 10px 5px black);
 }
 
 .earnRewards{
@@ -193,6 +211,11 @@ aside{
   justify-content: center;
   text-align: center;
   border-radius: 1.5rem;
+  filter: drop-shadow(2px 7px 5px black);
+}
+
+.content3:hover{
+  filter: drop-shadow(4px 10px 5px black);
 }
 
 .displayYourCollection{
@@ -237,5 +260,16 @@ footer{
     display: none;
     visibility: none;
   }
+  .worldCards{
+    font-size: 2rem;
+  }
+  .theMarketplace{
+    font-size: 1.5rem;
+  }
+
+  .connectToWalletBtn{
+    font-size: 1.5rem;
+  }
+
 
 }
