@@ -273,11 +273,11 @@ footer{
   }
   .theMarketplace{
     font-size: 1.5rem;
-      margin-bottom: 3rem;
     }
 
   .connectToWalletBtn{
     font-size: 1.5rem;
+      margin: 3rem auto 0 auto;
   }
 
 
