@@ -18,11 +18,12 @@ body{
 .container{
   margin: 0.5rem auto 1rem auto;
   max-width: 95%;
-  background: #FBFBFB;
+
+
   display: grid;
-  grid-template-columns: 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.6fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
   grid-template-areas:
   "nav nav nav nav"
   "aside main main main"
@@ -30,7 +31,7 @@ body{
   "aside content1 content2 content3";
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
-
+  text-align: center;
 }
 
 
@@ -42,21 +43,18 @@ nav{
   grid-area: nav;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 1rem 0;
+  justify-content: center;
+  margin: 1rem 1rem 1rem 1rem;
+  width: 100%;
 }
 
-.worldCardsLogo{
-  font-size: 1.7rem;
-  margin-left: 1rem;
-}
 
 .ul-nav{
   display: flex;
   flex-direction: row;
   list-style: none;
   justify-content: space-around;
-  width: 70%;
+  width: 80%;
 }
 
 /* aside */
@@ -77,6 +75,7 @@ aside{
   font-weight: bold;
   text-align: center;
   filter: drop-shadow(2px 2px 5px black);
+  margin-left: 1rem;
 }
 
 aside:hover{
@@ -244,8 +243,7 @@ footer{
 
 @media only screen and (max-width: 1000px){
   .container{
-    text-align: center;
-
+  text-align: center;
   grid-template-columns: 1fr;
   grid-template-rows: 0.5fr 0.7fr 0.7fr 1fr 1fr 1fr;
   grid-template-areas:
@@ -255,6 +253,10 @@ footer{
   "content1"
   "content2"
   "content3";
+  }
+  nav{
+    margin: 1rem auto;
+    width: 90%;
   }
   .worldCardsLogo{
     display: none;
